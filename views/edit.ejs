@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="w-full h-full bg-zinc-900 p-8 text-white">
+        <div class="nav">
+            <a class="text-blue-500" href="/read">read</a>
+        </div>
+        <h1 class="py-4 tracking-tighter text-3xl ">Update User</h1>
+        <form action="/update/<%= user._id %>" method="POST">
+            <input class="px-5 py-2 bg-transparent border-2 border-zinc-700 rounded-md " type="text"name="name" placeholder="Name">
+            <input class="px-5 py-2 bg-transparent border-2 border-zinc-700 rounded-md " type="text"name="email" placeholder="Email">
+            <input class="px-5 py-2 bg-transparent border-2 border-zinc-700 rounded-md " type="text"name="image" placeholder="Image url">
+            <input class="px-5 py-2 bg-green-500 hover:bg-green-700 text-red outline-none ml-3  rounded-md " type="submit" value="Update user">
+        </form>
+    </div>
+</body>
+</html>
